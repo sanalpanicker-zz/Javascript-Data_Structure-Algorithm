@@ -14,7 +14,7 @@ else{
 });
 
 
-for(var[deliveryID,count] of idsToOccurance){
+for(var value of idsToOccurance.values()){
 if(count === 1){
     return deliveryID;
 }

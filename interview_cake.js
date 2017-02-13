@@ -91,7 +91,7 @@ console.log("< tdfibbo > "+ tdfibbo(1000));
 
 //print fibnocci numbers
 
-function printFib(n){
+function printFib(n){          
 
 var fib = [0,1];
 
