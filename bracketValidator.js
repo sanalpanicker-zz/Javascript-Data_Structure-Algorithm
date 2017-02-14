@@ -6,8 +6,8 @@ var resultArr = [];
         '[': ']',
         '{': '}',
     };
-    var openers = new Set([]'{', '[', '(');
-    var closers = new Set('}', ']', ')');
+    var openers = new Set(['{', '[', '(']);
+    var closers = new Set(['}', ']', ')']);
 values.forEach(function(e){
     console.log("****new e******");
     openersStack = [];
