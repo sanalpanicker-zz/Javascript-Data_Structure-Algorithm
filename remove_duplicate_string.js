@@ -11,3 +11,15 @@ return finalStr;
 }
 
 console.log(remove_duplicate_string("SansAal"));
+
+//functional programming
+
+function remove_duplicate_string_filter(string){
+var arra = string.split('');
+return arra.filter(function(char,position){
+ return arra.indexOf(char) == position;
+}).join('');
+
+}
+
+console.log(remove_duplicate_string_filter("SansAal"));
