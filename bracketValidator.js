@@ -47,3 +47,42 @@ values.forEach(function(e){
 
 
 console.log(isValid(["{}[]()","{[}]"]));
+
+//ES6 method
+// let bracketValidator = (input) => {
+
+
+//     const bracketLookup = {
+//         '(': ')',
+//         '{': '}',
+//         '[': ']'
+//     }
+//     const openers = ['(', '{', '['];
+//     const closers = [')', '}', ']'];
+//     let openerStack = [];
+//     for (let item of input) {
+//         let itemArr = item.split('');
+//         for (let character of itemArr) {
+//             if (openers.includes(character)) {
+//                 openerStack.push(character);
+//             } else if (closers.includes(character)) {
+//                 if (!openerStack.length) {
+//                     break;
+//                 } else {
+//                     let lastUnclosedOpener = openerStack.pop();
+//                     if (bracketLookup[lastUnclosedOpener] !== character) {
+//                         break;
+//                     }
+//                 }
+//             }
+
+//         }
+//     }
+  
+//   if(openerStack.length == 0){
+//     return "YES";
+//   }
+//   else{
+//     return "NO";
+//   }
+// }

@@ -1,7 +1,7 @@
 //using String.prototype.seacrh
 //it returns -1 if not found; >1 if the value is there
 function isSubString(str1,str2){
-if(str1.search(str2) != -1){
+if(str1.includes(str2)){
     return true;
 }
 else return false;

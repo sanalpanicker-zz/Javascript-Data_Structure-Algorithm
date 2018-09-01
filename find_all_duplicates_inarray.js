@@ -7,3 +7,6 @@ var duplicates = input.reduce(function(acc, el, i, arr) {
 }, []);
 
 console.log(duplicates);
+
+//difference between solice and slice
+//why modulo?

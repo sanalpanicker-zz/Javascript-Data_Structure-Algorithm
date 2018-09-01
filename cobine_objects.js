@@ -26,3 +26,20 @@ var obj3 = {
     c:"HeyC"
 }
 console.log(combineObject(obj1,obj2,obj3));
+
+//ES6
+//dont use arrow functions as the arguments object is not present.
+// let combineObject = function(){
+//     let resultObj = {};
+//   if(arguments){
+//     for(let obj of arguments){
+//       for(let prop in obj){
+//         if(obj.hasOwnProperty(prop)){
+//           resultObj[prop] = obj[prop];
+//         }
+//       }
+//     }
+//   }
+//    return resultObj;
+    
+//   }

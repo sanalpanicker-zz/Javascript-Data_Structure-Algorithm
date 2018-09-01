@@ -16,4 +16,4 @@ let globalMax = 0,
     return globalMax;
 }
 
-console.log(maxSubArray([-2,-3,4,-1,-2,1,5,-3]));
+console.log(maxSubArray([-1,-2,2,3,4]));
