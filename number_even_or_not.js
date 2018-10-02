@@ -4,4 +4,4 @@ console.log(testNumber & 1);
 return testNumber & 1 ? "odd" : "even";
 }
 
-console.log(numberEven_or_Not(7));
+console.log(numberEven_or_Not(6));

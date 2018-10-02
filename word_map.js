@@ -20,6 +20,7 @@ return Math.max.apply(null,wordCounter.keys());
 // }
 
 // }
+//find max value in an object
 // Object.keys(obj).reduce(function(a, b){ return obj[a] > obj[b] ? a : b });
 }
 

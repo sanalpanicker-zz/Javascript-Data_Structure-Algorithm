@@ -6,4 +6,4 @@ if(n <= 2){
 return fibNthValue(n-1)+fibNthValue(n-2);
 }
 
-console.log(fibNthValue(7));
+console.log(fibNthValue(3));
