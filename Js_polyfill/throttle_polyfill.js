@@ -1,5 +1,5 @@
 let o_func = () =>{
-    console.log("I am fired");
+    console.log("I got offer at Splunk");
 }
 
 let throttled = (callback, delay) =>{

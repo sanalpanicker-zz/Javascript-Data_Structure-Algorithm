@@ -37,4 +37,13 @@ return arra.filter(function(char,position){
 
 }
 
+/////////////////// find if the array has duplicate sttrings/////////////////
+
+const DoesArrayhaveDuplicate = (arr) => {
+return arr.sort().some((element,i)=>(arr[i+1] === element))
+};
+// you can also do it with filter. if you want the unique array back.
+
 console.log(remove_duplicate_string_filter("SansAal"));
+console.log(DoesArrayhaveDuplicate([4,2,7,8,4]));
+console.log(DoesArrayhaveDuplicate([4,2,7,8,1]));

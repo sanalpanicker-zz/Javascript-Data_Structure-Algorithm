@@ -32,7 +32,7 @@
 // }
 
 
-console.log(permut("Sanal"));
+console.table(permut("Sanal"));
 
 
 function permut(string) {

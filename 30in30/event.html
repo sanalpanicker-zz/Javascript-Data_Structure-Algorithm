@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<style>
+    html{
+        box-sizing: border-box;
+    }
+    *, *::before, *::after {box-sizing: inherit;}
+div{
+        width: 100%;
+        padding: 100px;
+    }
+.one{
+    background: red;
+}
+.two{
+    /* width:80%; */
+    background: blue;
+}
+.three{
+    /* width:60%; */
+    background: green;
+}
+</style>
+    </head>
+    <body>
+            <div class="block one">
+                <div class="block two">
+                    <div class="block three"></div>
+                </div>
+            </div>
+        <script>
+
+const divs = document.querySelectorAll('div');
+function logtext(){
+    //console.log(arguments[0].target.className);
+    //here the this binds to the DOM object
+console.log(this.classList.value);
+}
+
+divs.forEach((div)=>{
+    div.addEventListener('click', logtext , {once : true});
+
+})
+//addind the value of once as true in the third paraments, unbinds the even listerner after 1 fire.
+//you can also use .removeEventListener
+        </script>
+    </body>
+</html>

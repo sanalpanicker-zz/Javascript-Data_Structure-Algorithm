@@ -15,4 +15,4 @@ return stringArray.join('');
 
 }
 
-console.log(reverseString("Sanal are you here  "));
+console.log(reverseString("Sana"));

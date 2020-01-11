@@ -1,10 +1,10 @@
 
 let originalFunction = () => {
-    console.log("I am fired");
+    console.log("I got offer from google");
 }
 
 let doriginalFunction = () => {
-    console.log("dI am fired");
+    console.log("I got offer from google");
 }
 
 //polyfill for loadash debounce

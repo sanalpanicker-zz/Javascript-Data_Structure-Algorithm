@@ -1,6 +1,6 @@
-let bracketValidator = (input) => {
+const bracketValidator = (input) => {
 
-
+console.log("in here");
     const bracketLookup = {
         '(': ')',
         '{': '}',
@@ -17,15 +17,19 @@ let bracketValidator = (input) => {
                 openerStack.push(character);
             } else if (closers.includes(character)) {
                 if (!openerStack.length) {
-                    break;
+                    return false;
                 } else {
                     let lastUnclosedOpener = openerStack.pop();
                     if (bracketLookup[lastUnclosedOpener] !== character) {
-                        break;
+                        return false;
                     }
                 }
             }
 
         }
     }
+    return true;
 }
+
+console.log(bracketValidator('{{{}}]'));
+//bracket validator, closing opening bracket 

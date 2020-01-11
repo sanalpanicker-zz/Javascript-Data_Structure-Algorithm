@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<style>
+        html{
+            font-size: 50px; 
+        box-sizing: border-box;
+    }
+    *, *::before, *::after {box-sizing: inherit;}
+*{
+    margin: 0px;
+    border: 0px;
+}
+header{
+    text-align: center;
+    width:100%;
+    padding-top: 0.5rem;
+}
+.claculator{
+    width:10rem;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.calculator__display input[type='text']{
+    background-color: black;
+    color: white;
+    border-radius: 1rem;
+    width:10rem;
+    padding-left: 1rem;
+}
+
+td{
+    width:3rem;
+    height: 2rem;
+}
+td, input[type="button"]{
+    text-align: center;
+}
+input[type="button"],input[type="text"] {
+    font-size:50px;
+}
+</style>
+
+</head>
+
+<body>
+    <header>My Simple Calculator</header>
+<div class="claculator">
+       <div class="calculator__display">
+                    <input type="text" id="display" value="" disabled/>
+       </div>
+    <table class="calculator__dial">
+        <tbody>
+            <tr>
+                    <td>
+                            <input type="button" value="1" onclick="calculate.click(event)"/>
+        
+                    </td>
+                <td>
+                        <input type="button" value="2" onclick="calculate.click(event)"/>
+
+                </td>
+                <td>
+                        <input type="button" value="3" onclick="calculate.click(event)"/>
+
+                </td>
+                <td>
+                        <input type="button" value="+" onclick="calculate.click(event)"/>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        <input type="button" value="4" onclick="calculate.click(event)"/>
+
+                </td>
+                <td>
+                        <input type="button" value="5" onclick="calculate.click(event)"/>
+
+                </td>
+                <td>
+                        <input type="button" value="6" onclick="calculate.click(event)"/>
+
+                </td>
+                <td>
+                        <input type="button" value="-" onclick="calculate.click(event)"/>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                        <input type="button" value="7" onclick="calculate.click(event)"/>
+
+                </td>
+                <td>
+                        <input type="button" value="8" onclick="calculate.click(event)"/>
+
+                </td>
+                <td>
+                        <input type="button" value="9" onclick="calculate.click(event)"/>
+
+                </td>
+                <td>
+                        <input type="button" value="*" onclick="calculate.click(event)"/>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        <input type="button" value="C" onclick="calculate.clear()"/>
+
+                </td>
+                <td>
+                        <input type="button" value="0" onclick="calculate.click(event)"/>
+
+                </td>
+                <td>
+                        <input type="button" value="=" onclick="calculate.equal(event)"/>
+
+                </td>
+                <td>
+                        <input type="button" value="/" onclick="calculate.click(event)"/>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+<script>
+
+const calculate = (() => {
+let display = '';
+
+const valDisplay = ()=> {
+    document.getElementById('display').value = display;
+}
+const click = (e)=>{
+    display += e.target.value;
+    valDisplay();
+}
+
+const clear = ()=>{
+    display='';
+    valDisplay();
+}
+const evaluate = (val) =>{
+    if(display.includes('NaN'))
+    val = 0;
+return new Function('return ' + val)();
+}
+const equal = () =>{
+    display = evaluate(display);
+    valDisplay();
+}
+    return{
+        click: click,
+        clear: clear,
+        equal: equal
+    }
+})();
+
+
+</script>
+</html>

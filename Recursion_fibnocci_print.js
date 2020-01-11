@@ -6,4 +6,24 @@ for(var i=2;i<n;i++){
 return list;
 }
 
-console.log(fibSeries(5));
+console.table(fibSeries(100));
+
+
+//even fib number
+
+
+
+function printEvenFibNumbers(n){
+
+const initArr = [1,1];
+const result = [];
+for(var i =2 ;i<n; i++){
+    initArr.push(initArr[i-1] + initArr[i-2]);
+    if(initArr[i]%2 === 0){
+        result.push(initArr[i]);
+    }
+}
+return result;
+}
+
+console.table(printEvenFibNumbers(100));
