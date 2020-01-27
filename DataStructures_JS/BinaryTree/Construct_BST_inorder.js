@@ -1,5 +1,3 @@
-//https://www.youtube.com/watch?v=suj1ro8TIVY&list=PLiQ766zSC5jPIKibTa5qtXpwgwEBalDV4&index=4&t=0s
-
 class TreeNode {
     constructor(value){
       this.value = value;
@@ -81,41 +79,14 @@ class TreeNode {
   
   }
 }
-const serialize = (treeNode) => {
-if(treeNode == null){
-    return "X";
-}
-return treeNode.value + "," + serialize(treeNode.left) + "," + serialize(treeNode.right);
+
+
+
+const BSTfromInorder = (inorderArr) =>{
+    
+
 }
 
-const deSerliazeHelper = (nodes) => {
-    const nodeVal = nodes.shift();
-        if(nodeVal === "X"){
-            return null;
-        }
-    const treeNode = new TreeNode(parseInt(nodeVal));
-    treeNode.left = deSerliazeHelper(nodes); //finishes left subtree
-    treeNode.right = deSerliazeHelper(nodes);// goes to right subtree
-    return treeNode;
-}
 
-const deserialize = (str) => {
-    const qeueNodes = str.split(',');
-    return deSerliazeHelper(qeueNodes);x
-}
-//post oorder is root - left subtree - right subtree
-  const bn = new TreeNode(20);
-  const bt = new Tree(bn);
-  bt.insert(15);
-  bt.insert(25);
-  bt.insert(19);
-  bt.insert(14);
-  bt.insert(100);
-  bt.insert(60);
-  bt.insert(23);
-  //seralize
-const SStr = serialize(bn);
-//deSearialize
-const dSStr = deserialize(SStr);
-//again serialize
-console.log(serialize(dSStr));
+//https://www.geeksforgeeks.org/construct-binary-tree-from-inorder-traversal/
+BSTfromInorder([5, 10, 40, 30, 28]);
